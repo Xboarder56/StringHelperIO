@@ -63,14 +63,28 @@ public class StringHelper implements StringInterface
 	@Override
 	public int printNumberOfCharacters(String searchString, char searchCharacter)
 	{
-		// TODO Auto-generated method stub
+		if()
+		{
+			
+		}
+		else
+		{
+			
+		}
 		
 	}
 
 	@Override
 	public boolean findPalindrome()
 	{
-		// TODO Auto-generated method stub
+		if()
+		{
+			
+		}
+		else
+		{
+			
+		}
 		
 	}
 

@@ -208,10 +208,10 @@ public class StringDriver
 			inputSix();
 		}
 		
-		/*Anything else other then 1-4 will go down here*/ 
+		/*Anything else other then 1-6 will go down here*/ 
 		else
 		{
-			/*Tell the user to please enter a number between 1-4 and loop the code*/
+			/*Tell the user to please enter a number between 1-6 and loop the code*/
 			System.out.println("Not a valid selection please enter a number between 1-6");
 			inputReader();
 		}
