@@ -42,6 +42,22 @@ public class StringDriver
 	 */
 	public static void inputOne()
 	{
+		/*Tell the user to pick a selection between 1-4*/
+		System.out.println("Please enter how many strings you want to search: ");
+		int stringAmount = console.nextInt(); //clears the prompt (to skip enter key)
+		console.nextLine();
+		
+		/*Loop over creating movie objects for the X amount of times
+		 * the user specifies in the movieAmount Variable*/
+		for(int i=0; i<stringAmount; i++)
+		{
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter the text to search: ");
+			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			StringHelper vowel = new StringHelper();
+			System.out.println(vowel.containsVowel(searchString));
+		}
 		
 	}
 	
@@ -51,7 +67,22 @@ public class StringDriver
 	 */
 	public static void inputTwo()
 	{
+		/*Tell the user to pick a selection between 1-4*/
+		System.out.println("Please enter how many strings you want to search: ");
+		int stringAmount = console.nextInt(); //clears the prompt (to skip enter key)
+		console.nextLine();
 		
+		/*Loop over creating movie objects for the X amount of times
+		 * the user specifies in the movieAmount Variable*/
+		for(int i=0; i<stringAmount; i++)
+		{
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter the text to search: ");
+			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			StringHelper stringer = new StringHelper();
+			System.out.println(stringer.containsVowel(searchString));
+		}
 	}
 	
 	/**
@@ -60,7 +91,22 @@ public class StringDriver
 	 */
 	public static void inputThree()
 	{
+		/*Tell the user to pick a selection between 1-4*/
+		System.out.println("Please enter how many strings you want to search: ");
+		int stringAmount = console.nextInt(); //clears the prompt (to skip enter key)
+		console.nextLine();
 		
+		/*Loop over creating movie objects for the X amount of times
+		 * the user specifies in the movieAmount Variable*/
+		for(int i=0; i<stringAmount; i++)
+		{
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter the text to search: ");
+			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			StringHelper stringer = new StringHelper();
+			stringer.printLengthWords(searchString);
+		}
 	}
 	
 	/**
