@@ -2,7 +2,7 @@ package stringer.help;
 
 public class StringHelper implements StringInterface
 {
-	//String searchString;
+	int counter =0;
 	
 	public StringHelper()
 	{
@@ -56,6 +56,7 @@ public class StringHelper implements StringInterface
 		{
 			System.out.print(part +" ");
 		}
+		
 		}
 		
 	}
@@ -63,19 +64,22 @@ public class StringHelper implements StringInterface
 	@Override
 	public int printNumberOfCharacters(String searchString, char searchCharacter)
 	{
-		if()
+		
+		if(counter==searchString.length())
 		{
-			
+			return 0;
 		}
 		else
 		{
-			
+			counter++;
+			printNumberOfCharacters(searchString, searchCharacter);
+			return searchString.indexOf(searchString, searchCharacter);
 		}
 		
 	}
 
 	@Override
-	public boolean findPalindrome()
+	public boolean findPalindrome(String searchString)
 	{
 		if()
 		{
@@ -85,7 +89,6 @@ public class StringHelper implements StringInterface
 		{
 			
 		}
-		
 	}
 
 }
