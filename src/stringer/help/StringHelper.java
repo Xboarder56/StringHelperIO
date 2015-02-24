@@ -60,20 +60,19 @@ public class StringHelper implements StringInterface
 		}
 		
 	}
-
+	//int totalCharactersFound =0;
 	@Override
 	public int printNumberOfCharacters(String searchString, char searchCharacter)
 	{
-		
-		if(counter==searchString.length())
+		if(!(searchString.contains(Character.toString(searchCharacter))))
 		{
 			return 0;
 		}
 		else
 		{
-			counter++;
-			printNumberOfCharacters(searchString, searchCharacter);
-			return searchString.indexOf(searchString, searchCharacter);
+			int result = 1 + printNumberOfCharacters(searchString.substring(searchString.indexOf(searchCharacter)+1), searchCharacter);
+			return result;
+			
 		}
 		
 	}
@@ -81,14 +80,7 @@ public class StringHelper implements StringInterface
 	@Override
 	public boolean findPalindrome(String searchString)
 	{
-		if()
-		{
-			
-		}
-		else
-		{
-			
-		}
+	return true;
 	}
 
 }

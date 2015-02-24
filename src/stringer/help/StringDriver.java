@@ -116,7 +116,8 @@ public class StringDriver
 	public static void inputFour()
 	{
 		StringHelper stringer = new StringHelper();
-		stringer.printNumberOfCharacters("test", 'e');
+		int result = stringer.printNumberOfCharacters("testeee", 't');
+		System.out.println(result);
 	}
 	
 	/**
