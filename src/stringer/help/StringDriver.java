@@ -2,6 +2,12 @@ package stringer.help;
 
 import java.util.Scanner;
 
+/**
+ * This is the driver class for the Stringhelper
+ * this is a simple UI to allow users to test different
+ * strings and there new options we have added.
+ * @author Garrett J. Beasley
+ */
 public class StringDriver
 {
 	/*Variables for the program.*/
@@ -81,7 +87,7 @@ public class StringDriver
 			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
 			
 			StringHelper stringer = new StringHelper();
-			System.out.println(stringer.containsVowel(searchString));
+			System.out.println(stringer.containsConsonant(searchString));
 		}
 	}
 	
@@ -105,7 +111,7 @@ public class StringDriver
 			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
 			
 			StringHelper stringer = new StringHelper();
-			stringer.printLengthWords(searchString);
+			stringer.printLengthWords(searchString, 5);
 		}
 	}
 	
@@ -115,9 +121,27 @@ public class StringDriver
 	 */
 	public static void inputFour()
 	{
-		StringHelper stringer = new StringHelper();
-		int result = stringer.printNumberOfCharacters("testeee", 't');
-		System.out.println(result);
+		/*Tell the user to pick a selection between 1-4*/
+		System.out.println("Please enter how many strings you want to search: ");
+		int stringAmount = console.nextInt(); //clears the prompt (to skip enter key)
+		console.nextLine();
+		
+		/*Loop over creating movie objects for the X amount of times
+		 * the user specifies in the movieAmount Variable*/
+		for(int i=0; i<stringAmount; i++)
+		{
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter the text to search: ");
+			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter one Char to search for, EX:(e): ");
+			String searchChar = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			StringHelper stringer = new StringHelper();
+			int result = stringer.printNumberOfCharacters(searchString, searchChar.charAt(0));
+			System.out.println(result);
+		}
 	}
 	
 	/**
@@ -126,7 +150,22 @@ public class StringDriver
 	 */
 	public static void inputFive()
 	{
+		/*Tell the user to pick a selection between 1-4*/
+		System.out.println("Please enter how many strings you want to search: ");
+		int stringAmount = console.nextInt(); //clears the prompt (to skip enter key)
+		console.nextLine();
 		
+		/*Loop over creating movie objects for the X amount of times
+		 * the user specifies in the movieAmount Variable*/
+		for(int i=0; i<stringAmount; i++)
+		{
+			/*Tell the user to pick a selection between 1-4*/
+			System.out.println("Please enter the text to search: ");
+			String searchString = console.nextLine(); //clears the prompt (to skip enter key)
+			
+			StringHelper stringer = new StringHelper();
+			System.out.println(stringer.findPalindrome(searchString));
+		}
 	}
 	
 	/**
@@ -138,7 +177,7 @@ public class StringDriver
 	public static void inputSix()
 	{
 		/*Goodbye to the user and thank them*/
-		System.out.println("Thanks for the movies! :)");
+		System.out.println("Thanks for testing your strings!");
 		
 		/*Close the java machine*/
 		System.exit(0);
